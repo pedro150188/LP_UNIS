@@ -18,8 +18,11 @@ janela.configure(bg=co0)
 frame_cima= Frame(janela, width=295, height=50,bg=co0, padx=0, pady=0, relief='flat')
 frame_cima.grid(row=0, column=0,sticky=NSEW)
 
-frame_baixo= Frame(janela, width=295, height=180,bg=co0, padx=0, pady=0, relief='flat')
-frame_baixo.grid(row=1, column=0,sticky=NSEW)
+frame_central= Frame(janela, width=295, height=180, bg=co0, padx=0, pady=0, relief='flat')
+frame_central.grid(row=1, column=0, sticky=NSEW)
+
+frame_baixo= Frame(janela, width=295, height=310,bg=co0, padx=0, pady=0, relief='flat')
+frame_baixo.grid(row=2, column=0,sticky=NSEW)
 
 #Adicionado o título da janela
 app_nome = Label(frame_cima, text='CALCULADORA DE IMC', width=23, height=1, padx=0, relief='flat', anchor='center', font=('Ivi 16 bold'), bg=co0, fg=co1)
@@ -62,15 +65,15 @@ def calcular():
 
 #Criando a Frame do Peso e o campo de entrada
 l_peso = Label(frame_baixo, text='Insira seu Peso', height=1, padx=0, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
-l_peso.grid(row=0, column=0, sticky=NSEW, pady=10, padx=3)
+l_peso.grid(row=1, column=0, sticky=NSEW, pady=10, padx=3)
 e_peso = Entry(frame_baixo, width=5, relief='solid', font=('Ivi 10 bold'), justify='center')
-e_peso.grid(row=0, column=1, sticky=NSEW, pady=10, padx=3)
+e_peso.grid(row=1, column=1, sticky=NSEW, pady=10, padx=3)
 
 #Criando a Frame da Altura e o campo de entrada
 l_altura = Label(frame_baixo, text='Insira sua Altura', height=1, padx=0, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
-l_altura.grid(row=1, column=0, sticky=NSEW, pady=10, padx=3)
+l_altura.grid(row=2, column=0, sticky=NSEW, pady=10, padx=3)
 e_altura = Entry(frame_baixo, width=5, relief='solid', font=('Ivi 10 bold'), justify='center')
-e_altura.grid(row=1, column=1, sticky=NSEW, pady=10, padx=3)
+e_altura.grid(row=2, column=1, sticky=NSEW, pady=10, padx=3)
 
 #Criando a Frame do Resultado
 l_resultado = Label(frame_baixo, text='___', width=5, height=1, padx=6, pady=12, relief='flat', anchor='center', font=('Ivi 24 bold'), bg=co2, fg=co0)
@@ -78,6 +81,18 @@ l_resultado.place(x=175, y=10)
 
 l_resultado_texto = Label(frame_baixo, text='', width=37, height=1, padx=0, pady=12, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
 l_resultado_texto.place(x=0, y=90)
+
+#Criando a Frame do nome e o campo de entrada
+l_nome = Label(frame_central, text='Insira seu nome', height=1, padx=0, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
+l_nome.grid(row=1, column=0, sticky=NSEW, pady=10, padx=3)
+e_nome = Entry(frame_central, width=35, relief='solid', font=('Ivi 10 bold'), justify='center')
+e_nome.grid(row=1, column=1, sticky=NSEW, pady=10, padx=3)
+
+#Criando a Frame do Endereco e o campo de entrada
+l_endereco = Label(frame_central, text='Insira seu Endereco', height=1, padx=0, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
+l_endereco.grid(row=2, column=0, sticky=NSEW, pady=10, padx=3)
+e_endereco = Entry(frame_central, width=35, relief='solid', font=('Ivi 10 bold'), justify='center')
+e_endereco.grid(row=2, column=1, sticky=NSEW, pady=10, padx=3)
 
 #Criando o botão de calculo
 b_calcular = Button(frame_baixo,command=calcular, text='Calcular', width=34, height=1, overrelief=SOLID, relief='raised', anchor='center', font=('Ivi 10 bold'), bg=co2, fg=co0)
