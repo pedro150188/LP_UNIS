@@ -11,10 +11,10 @@ co2 ='#4065a1' #azul
 #Criando a Janela
 janela = Tk()
 janela.title('')
-janela.geometry('295x230')
+janela.geometry('400x320')
 janela.configure(bg=co0)
 
-#Dividindo a Janela em duas partes (cima e baixa)
+#Dividindo a Janela em tres partes (cima, central e baixa)
 frame_cima= Frame(janela, width=295, height=50,bg=co0, padx=0, pady=0, relief='flat')
 frame_cima.grid(row=0, column=0,sticky=NSEW)
 
