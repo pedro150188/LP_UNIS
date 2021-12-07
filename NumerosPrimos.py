@@ -15,7 +15,7 @@ while numero <= 100:
     #Informando ao codigo a condicao
     if x == 2:
 #Imprimindo os numeros primos dentro da condicao de repeticao criada
-        print "Entre os numero de 1 a 100 o", numero, "e primo"
+        print ("Entre os numero de 1 a 100 o", numero, "e primo")
     numero = numero + 1
 print("=" * 100)
 
@@ -29,5 +29,5 @@ while number1 <=100:
             y = y + 1
         cont = cont + 1
     if y != 2:
-        print "Entre os numero de 1 a 100 o", number1, "nao e primo"
+        print ("Entre os numero de 1 a 100 o", number1, "nao e primo")
     number1 = number1 + 1

@@ -62,7 +62,10 @@ def calcular():
 
     l_resultado['text'] = "{:.{}f}".format(resultado, 2)
     
-
+e_nome = str()
+e_endereco = str()
+e_peso = int()
+e_altura = float()
 #Criando a Frame do Peso e o campo de entrada
 l_peso = Label(frame_baixo, text='Insira seu Peso', height=1, padx=0, relief='flat', anchor='center', font=('Ivi 10 bold'), bg=co0, fg=co1)
 l_peso.grid(row=1, column=0, sticky=NSEW, pady=10, padx=3)
